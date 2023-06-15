@@ -49,7 +49,7 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className="btn btn-outline btn-neutral">Play</button>
+                <button className="btn btn-outline btn-neutral">Login</button>
             </div>
         </div>
     );
