@@ -10,9 +10,9 @@ import img6 from '../../../assets/car (6).jpg'
 const Gallery = () => {
 
     return (
-        <div className='mt-10 mb-5'>
+        <div className='mt-10 mb-20'>
             <div className='text-center mb-5'>
-                <h3 className='md:text-6xl text-orange-500 font-bold' >Image Gallery</h3>
+                <h3 className='lg:text-[48px] text-[40px] ml-10  md:text-[68px] text-teal-500 font-bold' >Image Gallery</h3>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                 <div>

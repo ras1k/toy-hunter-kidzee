@@ -8,12 +8,12 @@ const Banner = () => {
                 <div className="absolute flex items-center px-24 rounded-xl text-center h-full gap-5 left-0 top-0 bottom-0 bg-gradient-to-r from-[#4b4949] to-[rgba(21- 21- 21- 0)] ">
 
                     <div className='text-white md:space-y-7'>
-                        <h1 className='md:text-7xl font-bold'>KIDZEE</h1>
+                        <h1 className='md:text-7xl font-bold text-teal-500'>KIDZEE</h1>
                         <h2 className='md:text-6xl font-extrabold'>
                             <p>Toy Cars for Your Kids</p>
                         </h2>
                         <p className='md:text-2xl'>the best Way to Adorn Playing Moments</p>
-                        <div className=''>
+                        <div className='gap-5'>
                             <button className='btn btn-primary md:mr-5'>Discover More</button>
                             <button className='btn btn-outline btn-ghost text-white'>Explore Cars</button>
                         </div>

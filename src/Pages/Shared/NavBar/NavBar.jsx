@@ -23,6 +23,9 @@ const NavBar = () => {
         <li>
             <Link to='/career'>Career</Link>
         </li>
+        <li>
+            <Link to='/Blog'>Blogs</Link>
+        </li>
         {/* {user?.email ? <>
             <li><Link to='/bookings'>My Bookings</Link></li>
             <li><button onClick={handleLogOut}>Logout</button></li>
