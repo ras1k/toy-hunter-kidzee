@@ -23,10 +23,8 @@ const SignUp = () => {
                 form.reset()
             })
             .catch(error => console.log(error))
-        
     }
-     const apiKey = import.meta.env.VITE_apiKey;
-     console.log(apiKey)
+
     return (
         <div>
             <div className="hero min-h-screen">
@@ -65,7 +63,6 @@ const SignUp = () => {
                                     <p className='my-4 text-center'>Already have an account? <Link to='/login' className='no-underline text-orange-600 font-bold'>Login</Link></p>
                                 </div>
                             </form>
-
                         </div>
                     </div>
                 </div>
