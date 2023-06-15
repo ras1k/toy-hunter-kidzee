@@ -8,10 +8,10 @@ const NavBar = () => {
 
     const handleLogOut = () => {
         logOut()
-        .then(() => {
-            
-         })
-        .catch(error => console.log(error))
+            .then(() => {
+
+            })
+            .catch(error => console.log(error))
     }
 
     const navItems = <>
@@ -32,6 +32,7 @@ const NavBar = () => {
             <li><button onClick={handleLogOut}>Logout</button></li>
         </> :
             <li><Link to='/login'>Login</Link></li>}
+
     </>
 
     return (

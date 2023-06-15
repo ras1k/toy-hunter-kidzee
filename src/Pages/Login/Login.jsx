@@ -1,11 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import img from '../../assets/login.png'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
 
     const { signIn } = useContext(AuthContext);
+    const [messageError, setMessageError] = useState('');
+    const [success, setSuccess] = useState('');
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -16,16 +19,19 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-
+        setMessageError("");
+        setSuccess("");
         signIn(email, password)
             .then((result) => {
                 const user = result.user;
                 console.log(user);
+                setSuccess("Successfully logged in")
                 navigate(from, { replace: true })
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
+                setMessageError(errorMessage)
                 console.log(errorCode, errorMessage)
             });
 
@@ -58,8 +64,10 @@ const Login = () => {
                                 </div>
                                 <div className="form-control mt-6">
                                     <input className="btn btn-primary" type="submit" value="Login" /> <br />
-                                    
+                                        <SocialLogin></SocialLogin>
                                     <p className='my-4 text-center'>New To CarDoctor? <Link to='/signup' className='no-underline text-orange-600 font-bold'>Signup</Link></p>
+                                    <p className='text-[red] mt-6 text-center'>{messageError}</p>
+                                    <p className='text-success text-center'>{success}</p>
                                 </div>
                             </form>
 
