@@ -53,13 +53,13 @@ const MyToy = ({ toy, handleDelete }) => {
                             <td className='w-1/5'>
                                 {quantity}
                             </td>
-                            {/* <th>
-                                <Link to={`/updateToy/${_id}`}><button className="btn btn-outline btn-xs">Edit</button></Link>
-                            </th> */}
+                            <th>
+                                <Link to={`/updatedToy/${_id}`}><button className="btn btn-outline btn-sm btn-neutral">Edit</button></Link>
+                            </th>
                           
                             <th>
                                 <button onClick={()=>handleDelete(_id)} className="btn btn-circle btn-outline">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-red-600 hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
                                 </button>
                             </th>
                         </tr>
