@@ -16,22 +16,22 @@ const Gallery = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                 <div>
-                    <img src={img5} alt="" />
+                    <img src={img5} className='rounded-s-lg rounded-b-none' alt="" />
                 </div>
                 <div>
-                    <img src={img2} alt="" />
-                </div>
-                <div>
-                    <img src={img4} alt="" />
-                </div>
-                <div>
-                    <img src={img5} alt="" />
-                </div>
-                <div>
-                    <img src={img5} alt="" />
+                    <img src={img2} className='rounded-e-lg rounded-b-none' alt="" />
                 </div>
                 <div>
                     <img src={img4} alt="" />
+                </div>
+                <div>
+                    <img src={img5} alt="" />
+                </div>
+                <div>
+                    <img src={img5} className='rounded-r-none rounded-b-lg' alt="" />
+                </div>
+                <div>
+                    <img src={img4} className='rounded-r-lg rounded-t-none' alt="" />
                 </div>
             </div>
         </div>

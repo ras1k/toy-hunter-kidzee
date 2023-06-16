@@ -19,24 +19,22 @@ const NavBar = () => {
             <Link to="/">Home</Link>
         </li>
         <li>
-            <Link to='/about'>About</Link>
-        </li>
-        <li>
-            <Link to='/career'>Career</Link>
+            <Link to=''>All Toys</Link>
         </li>
         <li>
             <Link to='/Blog'>Blogs</Link>
         </li>
         {user?.email ? <>
-            <li><Link to='/bookings'>My Bookings</Link></li>
-            <li><button onClick={handleLogOut}>Logout</button></li>
+            <li><Link to=''>My Toys</Link></li>
+            <li><Link to=''>Add A Toy</Link></li>
         </> :
-            <li><Link to='/login'>Login</Link></li>}
+            <li><Link to='/login'></Link></li>}
+        
 
     </>
 
     return (
-        <div className="navbar flex items-center bg-base-100 bg-teal-200 p-3 rounded-lg top-0 mb-4">
+        <div className="navbar flex items-center bg-base-100 bg-teal-200 p-3 rounded-b-lg top-0 mb-4">
             <div className="navbar-start flex">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -54,7 +52,10 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className="btn btn-outline btn-neutral">Login</button>
+                {user?.email ? <>
+                    <button className="btn btn-outline btn-neutral" onClick={handleLogOut}>Logout</button>
+                </> :
+                    <Link to='/login'><button className="btn btn-outline btn-neutral">Login</button></Link>}
             </div>
         </div>
     );

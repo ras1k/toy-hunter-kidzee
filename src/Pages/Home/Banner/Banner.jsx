@@ -1,5 +1,6 @@
 import React from 'react';
-import img from '../../../assets/sandy-millar-nuS2GDpCDoI-unsplash.jpg'
+import img from '../../../assets/sandy-millar-nuS2GDpCDoI-unsplash.jpg';
+import img2 from '../../../assets/kidzee-logo.png'
 const Banner = () => {
     return (
         <div>
