@@ -1,20 +1,22 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const ToyDetails = () => {
-    const {picture, cardName, price, quantity, subject, sellerName} = toy;
+    const allToys = useLoaderData()
+    const {picture, cardName, price, quantity, sellerEmail, description, rating, sellerName} = allToys;
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col lg:flex-row">
-                    <img src={photo} className="max-w-sm rounded-lg shadow-2xl" />
+            <div className="hero min-h-screen mb-10">
+                <div className="hero-content flex-col gap-20 lg:flex-row">
+                    <img src={picture} className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
-                        <h1 className="text-5xl font-bold">{name}</h1>
-                        <p className="py-6">Seller: {seller}</p>
-                        <p className="py-6">Email: {email}</p>
+                        <h1 className="text-5xl font-bold">{cardName}</h1>
+                        <p className="py-6">Seller: {sellerName}</p>
+                        <p className="py-6">Email: {sellerEmail}</p>
                         <p className="py-6">Price: {price}</p>
                         <p className="py-6">rating: {rating}</p>
                         <p className="py-6">Available Quantity: {quantity}</p>
-                        <h1 className="text-[180x]">Details: {details}</h1>
+                        <h1 className="text-[180x]">Details: {description}</h1>
                     </div>
                 </div>
             </div>

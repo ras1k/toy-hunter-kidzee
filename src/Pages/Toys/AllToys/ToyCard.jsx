@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ToyCard = ({ toy }) => {
-    const {picture, cardName, price, quantity, subject, sellerName} = toy;
+    const {_id, picture, cardName, price, quantity, subject, sellerName} = toy;
     return (
         <div className=''>
             <div className="overflow-x-auto">
@@ -47,7 +48,7 @@ const ToyCard = ({ toy }) => {
                             <td className='w-1/5'>${price}</td>
                             <td className='w-full'>{quantity}</td>
                             <th>
-                                <button className="btn btn-ghost btn-xs">details</button>
+                                <Link to={`/toyDetails/${_id}`}><button className="btn btn-ghost btn-xs">details</button></Link>
                             </th>
                         </tr>
                     </tbody>
