@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../providers/AuthProvider';
+import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 
 const AddToy = () => {
     const {user} = useContext(AuthContext)
@@ -9,42 +10,42 @@ const AddToy = () => {
 
         const form = event.target;
 
-        const photo = form.photo.value;
+        const picture = form.photo.value;
         const name = form.name.value;
-        const seller = form.seller.value;
-        const email = user?.email;
+        const sellerName = form.seller.value;
+        const sellerEmail = user?.email;
         const subCategory = form.category.value;
         const price = form.price.value;
         const rating = form.rating.value;
-        const details = form.details.value;
+        const description = form.details.value;
         const quantity = form.quantity.value;
 
-        const addToy = {photo,name,seller,email,subCategory,price,rating,details,quantity }
+        const addToy = {picture, sellerName, name, sellerEmail, subCategory, price, rating, description, quantity }
 
         console.log(addToy);
 
         // send data to the server
-        // fetch('https://y-xi-indol.vercel.app/addToy', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(addToy)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        //         if(data.insertedId){
-        //             Swal.fire(
-        //                 'Post successfully',
-        //               )
-        //               form.reset();
-        //         }
-        //     })
+        fetch('http://localhost:5000/addToy', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addToy)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if(data.insertedId){
+                    Swal.fire(
+                        'Post successfully',
+                      )
+                      form.reset();
+                }
+            })
     }
     return (
-        <div className="bg-slate-300 p-24">
-            <h2 className="text-3xl font-extrabold">Add a Toy</h2>
+        <div className="bg-slate-300 p-24 mb-20 mt-10 rounded-lg">
+            <h2 className="text-4xl text-center font-extrabold">Add a Toy</h2>
             <form onSubmit={handleAddToy}>
                 {/* form name and price row */}
                 <div className="md:flex mb-8">
@@ -133,7 +134,7 @@ const AddToy = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Add Toy"  className="bg-[#38797B] text-[white] py-3 rounded-xl cursor-pointer btn-block" />
+                <input type="submit" value="Add Toy"  className="bg-[#38797B] btn btn-neutral glass text-[white] py-3 rounded-xl cursor-pointer btn-block" />
 
             </form>
         </div>

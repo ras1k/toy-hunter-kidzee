@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ToyCard = ({ toy }) => {
-    const {_id, picture, cardName, price, quantity, subject, sellerName} = toy;
+    const {_id, picture, name, price, quantity, subCategory, sellerName} = toy;
     return (
         <div className=''>
             <div className="overflow-x-auto">
@@ -37,14 +37,14 @@ const ToyCard = ({ toy }) => {
                                         </div>
                                     </div>
                                     <div>
-                                        <div className="font-bold">{cardName}</div>
+                                        <div className="font-bold">{name}</div>
                                     </div>
                                 </div>
                             </td>
                             <td className='w-1/5'>
                                 {sellerName}
                             </td>
-                            <td className='w-1/5'>{subject}</td>
+                            <td className='w-1/5'>{subCategory}</td>
                             <td className='w-1/5'>${price}</td>
                             <td className='w-full'>{quantity}</td>
                             <th>
