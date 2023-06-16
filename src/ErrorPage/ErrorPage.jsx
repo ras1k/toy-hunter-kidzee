@@ -22,15 +22,9 @@ export default function ErrorPage() {
             </p>
             <div className="mt-4 flex items-center justify-center gap-x-3">
               <Link to='/'>
-                <button
-                  type="button"
-                  className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-
-                >
-
-                  Go back to home
+                <button type="button" className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
+                  Back to home
                 </button>
-
               </Link>
 
             </div>
