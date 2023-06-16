@@ -3,7 +3,7 @@ import { AuthContext } from '../../../providers/AuthProvider';
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 
 const AddToy = () => {
-    const {user} = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
 
     const handleAddToy = event => {
         event.preventDefault();
@@ -13,14 +13,14 @@ const AddToy = () => {
         const picture = form.photo.value;
         const name = form.name.value;
         const sellerName = form.seller.value;
-        const sellerEmail = user?.email;
+        const email = user?.email;
         const subCategory = form.category.value;
         const price = form.price.value;
         const rating = form.rating.value;
         const description = form.details.value;
         const quantity = form.quantity.value;
 
-        const addToy = {picture, sellerName, name, sellerEmail, subCategory, price, rating, description, quantity }
+        const addToy = { picture, sellerName, name, email, subCategory, price, rating, description, quantity }
 
         console.log(addToy);
 
@@ -35,11 +35,11 @@ const AddToy = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if(data.insertedId){
+                if (data.insertedId) {
                     Swal.fire(
                         'Post successfully',
-                      )
-                      form.reset();
+                    )
+                    form.reset();
                 }
             })
     }
@@ -54,7 +54,7 @@ const AddToy = () => {
                             <span className="label-text">Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="name" placeholder="Name"  className="input input-bordered w-full" />
+                            <input type="text" name="name" placeholder="Name" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
@@ -81,7 +81,7 @@ const AddToy = () => {
                             <span className="label-text">Email</span>
                         </label>
                         <label className="input-group">
-                            <input readOnly type="text" name="email" placeholder="Email" className="input input-bordered w-full"  defaultValue={user?.email}/>
+                            <input readOnly type="text" name="email" placeholder="Email" className="input input-bordered w-full" defaultValue={user?.email} />
                         </label>
                     </div>
                 </div>
@@ -134,7 +134,7 @@ const AddToy = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Add Toy"  className="bg-[#38797B] btn btn-neutral glass text-[white] py-3 rounded-xl cursor-pointer btn-block" />
+                <input type="submit" value="Add Toy" className="bg-[#38797B] btn btn-neutral glass text-[white] py-3 rounded-xl cursor-pointer btn-block" />
 
             </form>
         </div>
