@@ -29,7 +29,7 @@ const NavBar = () => {
             <li><Link to='/addToy'>Add A Toy</Link></li>
         </> :
             <li><Link to='/login'></Link></li>}
-        
+
 
     </>
 
@@ -52,10 +52,17 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                {user?.displayName && (
+                    <p>{user.displayName}</p>
+                )}
+                {user?.photoURL && (
+
+                    <img className="w-12 h-12 mx-3 rounded-full" src={user.photoURL} alt="user profile" />
+                )}
                 {user?.email ? <>
                     <button className="btn btn-outline btn-neutral" onClick={handleLogOut}>Logout</button>
                 </> :
-                    <Link to='/login'><button className="btn btn-outline btn-neutral">Login</button></Link>}
+                    <Link to='/login'><button className="btn btn-sm md:btn-md btn-outline btn-neutral">Login</button></Link>}
             </div>
         </div>
     );
