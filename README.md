@@ -1,7 +1,7 @@
 ## Live website LINK : [https://toy-market-place-assignment.web.app/](https://toy-marketplace-b19a0.web.app)
 
 ## Project title 
-This is a website or Toy Car
+Kidzee - a website or Toy Car
 
 ## Website features...
 * This is a toy c related website and you can see toy cars also you can see the toys details, seller, price. 
