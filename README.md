@@ -11,14 +11,14 @@ This is a website or Toy Car
 * React Router Dom:  React router dom is used to maintain the routes
 
 ## Technologies Used: 
-*ReactJS
-*NodeJS
-*ExpressJS
-*MongoDB
-*Tailwind CSS
-*DaisyUI
-*Firebase
-*React Icons
-*React Tabs
-*React Router Dom
-*Sweetalert
+* ReactJS
+* NodeJS
+* ExpressJS
+* MongoDB
+* Tailwind CSS
+* DaisyUI
+* Firebase
+* React Icons
+* React Tabs
+* React Router Dom
+* Sweetalert
