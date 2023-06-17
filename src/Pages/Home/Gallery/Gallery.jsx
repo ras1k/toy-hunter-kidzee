@@ -22,7 +22,7 @@ const Gallery = () => {
                     <img src={img2} className='rounded-e-lg rounded-b-none' alt="" />
                 </div>
                 <div>
-                    <img src={img4} alt="" />
+                    <img src={img4}  alt="" />
                 </div>
                 <div>
                     <img src={img5} alt="" />

@@ -13,7 +13,7 @@ const ToyDetails = () => {
                         <h1 className="text-5xl font-bold">{name}</h1>
                         <p className="py-6">Seller: {sellerName}</p>
                         <p className="py-6">Email: {email}</p>
-                        <p className="py-6">Price: {price}</p>
+                        <p className="py-6">Price: ${price}</p>
                         <p className="py-6">rating: {rating}</p>
                         <p className="py-6">Available Quantity: {quantity}</p>
                         <h1 className="text-[180x]">Details: {description}</h1>

@@ -6,7 +6,7 @@ const UpdatedToy = () => {
     const toy = useLoaderData();
     const {picture,name,sellerName,email,subCategory,price,rating,description,quantity, _id} = toy;
 
-    const handleUpdateToy = event => {
+    const handleUpdatedToy = event => {
         event.preventDefault();
 
         const form = event.target;
@@ -21,9 +21,9 @@ const UpdatedToy = () => {
         const description = form.details.value;
         const quantity = form.quantity.value;
 
-        const updateToy = {picture,name,sellerName,email,subCategory,price,rating,description,quantity }
+        const updatedToy = {picture,name,sellerName,email,subCategory,price,rating,description,quantity }
 
-        console.log(updateToy);
+        console.log(updatedToy);
 
         // send data to the server
         fetch(`https://toy-marketplace-server-three-alpha.vercel.app/allToys/${_id}`, {
@@ -31,7 +31,7 @@ const UpdatedToy = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(updateToy)
+            body: JSON.stringify(updatedToy)
         })
             .then(res => res.json())
             .then(data => {
@@ -48,7 +48,7 @@ const UpdatedToy = () => {
         <div>
             <div className="bg-slate-300 p-24 mb-20 mt-10 rounded-lg">
                 <h2 className="text-4xl font-extrabold text-center">Update Toy</h2>
-                <form onSubmit={handleUpdateToy}>
+                <form onSubmit={handleUpdatedToy}>
                     {/* form name and price row */}
                     <div className="md:flex mb-8">
                         <div className="form-control md:w-1/2">
