@@ -25,7 +25,7 @@ const AddToy = () => {
         console.log(addToy);
 
         // send data to the server
-        fetch('http://localhost:5000/addToy', {
+        fetch('https://toy-marketplace-server-three-alpha.vercel.app/addToy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

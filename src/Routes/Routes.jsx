@@ -37,12 +37,12 @@ const router = createBrowserRouter([
             {
                 path: 'allToys',
                 element: <AllToys></AllToys>,
-                loader: () => fetch('http://localhost:5000/allToys')
+                loader: () => fetch('https://toy-marketplace-server-three-alpha.vercel.app/allToys')
             },
             {
                 path: 'toyDetails/:id',
                 element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/allToys/${params.id}`)
+                loader: ({ params }) => fetch(`https://toy-marketplace-server-three-alpha.vercel.app/allToys/${params.id}`)
             },
             {
                 path: 'addToy',
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
             {
                 path: '/updatedToy/:id',
                 element: <UpdatedToy></UpdatedToy>,
-                loader: ({ params }) => fetch(`http://localhost:5000/allToys/${params.id}`)
+                loader: ({ params }) => fetch(`https://toy-marketplace-server-three-alpha.vercel.app/allToys/${params.id}`)
             },
         ]
     }
