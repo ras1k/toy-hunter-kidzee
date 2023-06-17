@@ -36,10 +36,6 @@ const router = createBrowserRouter([
                 element: <SignUp></SignUp>
             },
             {
-                path: 'homeTabs',
-                element: <PrivateRoute><HomeTabs></HomeTabs></PrivateRoute>
-            },
-            {
                 path: 'allToys',
                 element: <AllToys></AllToys>,
                 loader: () => fetch('https://toy-marketplace-server-three-alpha.vercel.app/allToys')
@@ -62,6 +58,10 @@ const router = createBrowserRouter([
                 element: <UpdatedToy></UpdatedToy>,
                 loader: ({ params }) => fetch(`https://toy-marketplace-server-three-alpha.vercel.app/allToys/${params.id}`)
             },
+            {
+                path: 'homeTabs',
+                element: <PrivateRoute><HomeTabs></HomeTabs></PrivateRoute>
+            }
         ]
     }
 ]);
