@@ -46,14 +46,14 @@ const UpdatedToy = () => {
     }
     return (
         <div>
-            <div className="bg-slate-300 p-24 mb-20 mt-10 rounded-lg">
-                <h2 className="text-4xl font-extrabold text-center">Update Toy</h2>
+            <div className="bg-teal-950 p-24 mb-20 mt-10 rounded-lg">
+                <h2 className="text-4xl font-extrabold text-center text-white">Update Toy</h2>
                 <form onSubmit={handleUpdatedToy}>
-                    {/* form name and price row */}
+
                     <div className="md:flex mb-8">
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text">Name</span>
+                                <span className="label-text text-white">Name</span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="name" defaultValue={name} placeholder="Name"  className="input input-bordered w-full" />
@@ -61,18 +61,18 @@ const UpdatedToy = () => {
                         </div>
                         <div className="form-control md:w-1/2 ml-4">
                             <label className="label">
-                                <span className="label-text">Price</span>
+                                <span className="label-text text-white">Price</span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="price" defaultValue={price} placeholder="Price" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
-                    {/* form seller row */}
+
                     <div className="md:flex mb-8">
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text">Seller Name</span>
+                                <span className="label-text text-white">Seller Name</span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="seller" defaultValue={sellerName} placeholder="Seller Name" className="input input-bordered w-full" />
@@ -80,18 +80,18 @@ const UpdatedToy = () => {
                         </div>
                         <div className="form-control md:w-1/2 ml-4">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text text-white">Email</span>
                             </label>
                             <label className="input-group">
                                 <input readOnly type="text" defaultValue={email} name="email" placeholder="Email" className="input input-bordered w-full"  />
                             </label>
                         </div>
                     </div>
-                    {/* form sub category and rating row */}
+
                     <div className="md:flex mb-8">
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text">Sub-category</span>
+                                <span className="label-text text-white">Sub-category</span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="category" defaultValue={subCategory} placeholder="Sub-category" className="input input-bordered w-full" />
@@ -99,18 +99,18 @@ const UpdatedToy = () => {
                         </div>
                         <div className="form-control md:w-1/2 ml-4">
                             <label className="label">
-                                <span className="label-text">Rating</span>
+                                <span className="label-text text-white">Rating</span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="rating" defaultValue={rating} placeholder="Rating" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
-                    {/* form available quantity and details row */}
+
                     <div className="md:flex mb-8">
                         <div className="form-control md:w-1/2">
                             <label className="label">
-                                <span className="label-text">Available Quantity</span>
+                                <span className="label-text text-white">Available Quantity</span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="quantity" defaultValue={quantity} placeholder="Available Quantity" className="input input-bordered w-full" />
@@ -118,25 +118,25 @@ const UpdatedToy = () => {
                         </div>
                         <div className="form-control md:w-1/2 ml-4">
                             <label className="label">
-                                <span className="label-text">Detail description</span>
+                                <span className="label-text text-white">Detail description</span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="details" defaultValue={description} placeholder="Detail description" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
-                    {/* form Photo url row */}
+
                     <div className="mb-8">
                         <div className="form-control w-full">
                             <label className="label">
-                                <span className="label-text">Photo URL</span>
+                                <span className="label-text text-white">Photo URL</span>
                             </label>
                             <label className="input-group">
                                 <input type="text" name="photo" defaultValue={picture} placeholder="Photo URL" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
-                    <input type="submit" value="Update Toy" className="bg-[#38797B] btn btn-neutral glass py-3 rounded-xl cursor-pointer btn-block" />
+                    <input type="submit" value="Update Toy" className="text-white btn btn-neutral glass py-3 rounded-xl cursor-pointer btn-block" />
 
                 </form>
             </div>

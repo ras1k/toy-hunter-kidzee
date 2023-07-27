@@ -1,11 +1,14 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
 const HomeTabs = () => {
     return (
-        <div>
+        <div className='p-8'>
+            <div className='text-center mb-5'>
+                <h3 className='lg:text-[42px] text-[40px] w-2/6 mx-auto rounded-lg p-1  md:text-[68px] text-white bg-teal-950 bg-opacity-90 font-bold' >Category</h3>
+            </div>
             <Tabs>
                 <TabList>
                     <Tab>Race Cars</Tab>
@@ -22,7 +25,7 @@ const HomeTabs = () => {
                                 <p>Price: $49.99</p>
                                 <p>Rating: 4.8</p>
                                 <div className="card-actions justify-end">
-                                    <Link to='/toyDetails/648aebbc8ec5b4d13dd5c53b'><button className="btn btn-primary">View details</button></Link>
+                                    <Link to='/toyDetails/648aebbc8ec5b4d13dd5c53b'><button className="btn btn-outline text-white bg-teal-950">View details</button></Link>
                                 </div>
                             </div>
                         </div>
@@ -33,7 +36,7 @@ const HomeTabs = () => {
                                 <p>Price: $29.99</p>
                                 <p>Rating: 4.2</p>
                                 <div className="card-actions justify-end">
-                                    <Link to='/toyDetails/648aebbc8ec5b4d13dd5c537'><button className="btn btn-primary">View details</button></Link>
+                                    <Link to='/toyDetails/648aebbc8ec5b4d13dd5c537'><button className="btn btn-outline text-white bg-teal-950">View details</button></Link>
                                 </div>
                             </div>
                         </div>
@@ -48,7 +51,7 @@ const HomeTabs = () => {
                                 <p>Price: $14.99</p>
                                 <p>Rating: 4.5</p>
                                 <div className="card-actions justify-end">
-                                    <Link to='/toyDetails/648aebbc8ec5b4d13dd5c539'><button className="btn btn-primary">View details</button></Link>
+                                    <Link to='/toyDetails/648aebbc8ec5b4d13dd5c539'><button className="btn btn-outline text-white bg-teal-950">View details</button></Link>
                                 </div>
                             </div>
                         </div>
@@ -59,7 +62,7 @@ const HomeTabs = () => {
                                 <p>Price: $39.99</p>
                                 <p>Rating: 4.6</p>
                                 <div className="card-actions justify-end">
-                                    <Link to='/toyDetails/648aebbc8ec5b4d13dd5c536'><button className="btn btn-primary">View details</button></Link>
+                                    <Link to='/toyDetails/648aebbc8ec5b4d13dd5c536'><button className="btn btn-outline text-white bg-teal-950">View details</button></Link>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +77,7 @@ const HomeTabs = () => {
                                 <p>Price: $24.99</p>
                                 <p>Rating: 4.3</p>
                                 <div className="card-actions justify-end">
-                                    <Link to='/toyDetails/648aebbc8ec5b4d13dd5c53a'><button className="btn btn-primary">View details</button></Link>
+                                    <Link to='/toyDetails/648aebbc8ec5b4d13dd5c53a'><button className="btn btn-outline text-white bg-teal-950">View details</button></Link>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +88,7 @@ const HomeTabs = () => {
                                 <p>Price: $19.99</p>
                                 <p>Rating: 4</p>
                                 <div className="card-actions justify-end">
-                                    <Link to='/toyDetails/648aebbc8ec5b4d13dd5c538'><button className="btn btn-primary">View details</button></Link>
+                                    <Link to='/toyDetails/648aebbc8ec5b4d13dd5c538'><button className="btn btn-outline text-white bg-teal-950">View details</button></Link>
                                 </div>
                             </div>
                         </div>

@@ -1,18 +1,21 @@
 import React, { useContext, useState } from 'react';
 import img from '../../assets/login.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 
 const SignUp = () => {
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUserProfile } = useContext(AuthContext);
     const [messageError, setMessageError] = useState('');
+    const navigate = useNavigate();
 
     const handleSignUp = event => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
+        const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
         // const all = { name, email, password };
@@ -21,8 +24,19 @@ const SignUp = () => {
         createUser(email, password)
             .then(result => {
                 const loggedUser = result.user;
-                console.log(loggedUser)
-                form.reset()
+                console.log(loggedUser);
+                updateUserProfile(name, photo);
+                Swal.fire({
+                    title: 'User Sign Up successful, Login Now!',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
+                });
+                navigate('/login');
+                form.reset();
             })
             .catch(error => {
                 console.log(error)
@@ -40,7 +54,7 @@ const SignUp = () => {
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div className="card-body">
-                            <h1 className="text-5xl font-bold text-center">Signup</h1>
+                            <h1 className="text-5xl font-bold text-center text-teal-950">Signup</h1>
                             <form onSubmit={handleSignUp}>
                                 <div className="form-control">
                                     <label className="label">
@@ -71,7 +85,7 @@ const SignUp = () => {
                                 </div>
                                 <p className='text-[red] mt-6 text-center'>{messageError}</p>
                                 <div className="form-control mt-6">
-                                    <input className="btn btn-primary" type="submit" value="Sign Up" /> <br />
+                                    <input className="btn btn-outline text-teal-950" type="submit" value="Sign Up" /> <br />
                                     <SocialLogin></SocialLogin>
                                     <br />
                                     <p className='my-4 text-center'>Already have an account? <Link to='/login' className='no-underline text-orange-600 font-bold'>Login</Link></p>

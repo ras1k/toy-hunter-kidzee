@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import logo from '../../../assets/kidzee-logo.png';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 
 const NavBar = () => {
@@ -15,26 +15,27 @@ const NavBar = () => {
     }
 
     const navItems = <>
-        <li>
-            <Link to="/">Home</Link>
+        <li className='text-white'>
+            <NavLink to="/">Home</NavLink>
         </li>
-        <li>
-            <Link to='/allToys'>All Toys</Link>
+        <li className='text-white'>
+            <NavLink to='/allToys'>All Toys</NavLink>
         </li>
-        <li>
-            <Link to='/Blog'>Blogs</Link>
+        <li className='text-white'>
+            <NavLink to='/blog'>Blogs</NavLink>
+        </li>
+        <li className='text-white'>
+            <NavLink to='/about'>About us</NavLink>
         </li>
         {user?.email ? <>
-            <li><Link to='/myToys'>My Toys</Link></li>
-            <li><Link to='/addToy'>Add A Toy</Link></li>
+            <li className='text-white'><NavLink to='/myToys'>My Toys</NavLink></li>
+            <li className='text-white'><NavLink to='/addToy'>Add A Toy</NavLink></li>
         </> :
-            <li><Link to='/login'></Link></li>}
-
-
+            <li className='text-white'></li>}
     </>
 
     return (
-        <div className="navbar flex items-center bg-teal-200 p-3 rounded-b-lg top-0 mb-4">
+        <div className="navbar flex items-center bg-teal-950 p-3 rounded-b-lg top-0 mb-4">
             <div className="navbar-start flex">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -44,7 +45,7 @@ const NavBar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <Link to="/" ><img src={logo} className='w-2/6' alt="" /></Link>
+                <Link to="/" ><img src={logo} className='w-2/6 bg-white p-1 rounded-lg' alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -53,16 +54,16 @@ const NavBar = () => {
             </div>
             <div className="navbar-end">
                 {user?.displayName && (
-                    <p>{user.displayName}</p>
+                    <p className='text-white'>{user.displayName}</p>
                 )}
                 {user?.photoURL && (
 
                     <img className="w-12 h-12 mx-3 rounded-full" src={user.photoURL} alt="user profile" />
                 )}
                 {user?.email ? <>
-                    <button className="btn btn-outline btn-neutral" onClick={handleLogOut}>Logout</button>
+                    <button className="btn btn-outline text-white btn-neutral" onClick={handleLogOut}>Logout</button>
                 </> :
-                    <Link to='/login'><button className="btn btn-sm md:btn-md btn-outline btn-neutral">Login</button></Link>}
+                    <Link to='/login'><button className="btn text-white btn-sm md:btn-md btn-outline btn-neutral">Login</button></Link>}
             </div>
         </div>
     );

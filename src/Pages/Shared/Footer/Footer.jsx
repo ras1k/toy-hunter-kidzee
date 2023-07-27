@@ -1,9 +1,9 @@
-import React from 'react';
+
 
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-base-300 text-base-content">
+            <footer className="footer p-10 bg-teal-950 text-white">
                 <div>
                     
                 </div>
@@ -31,8 +31,8 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
-            <div className='text-center bg-base-300 p-4'>
-                <p>© Copyright 2023 Kidzee Intl. Ltd. All rights reserved</p>
+            <div className='text-center bg-teal-950 text-white  p-4'>
+                <p>© Copyright 2023 Kidzee Car Store Ltd. All rights reserved</p>
             </div>
         </div>
     );
