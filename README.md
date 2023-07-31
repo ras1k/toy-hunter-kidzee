@@ -1,4 +1,4 @@
-## Live website LINK : [https://toy-market-place-assignment.web.app/](https://toy-marketplace-b19a0.web.app)
+## Live website LINK : [https://toy-market-place.web.app/](https://toy-marketplace-b19a0.web.app)
 
 ## Project title 
 Kidzee - a website or Toy Car
