@@ -1,6 +1,8 @@
 # Kidzee - A Toy Marketplace
 
-## Live website LINK : [Link](https://toy-marketplace-b19a0.web.app)
+## Links:
+* [Live Site](https://toy-marketplace-b19a0.web.app)
+* [Server](https://github.com/ras1k/toy-marketplace-server)
 
 ## Website features:
 * This is a toy c related website and you can see toy cars also you can see the toys details, seller, price. 
@@ -20,6 +22,6 @@
 * React Icons
 * React Tabs
 * React Router Dom
-* Sweetalert
+* Sweetalert2
 * Swiper
 * Vercel
