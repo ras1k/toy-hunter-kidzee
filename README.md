@@ -1,4 +1,4 @@
-## Live website LINK : [https://toy-market-place.web.app/](https://toy-marketplace-b19a0.web.app)
+## Live website LINK : [Link](https://toy-marketplace-b19a0.web.app)
 
 ## Project title 
 Kidzee - a website or Toy Car
@@ -22,3 +22,5 @@ Kidzee - a website or Toy Car
 * React Tabs
 * React Router Dom
 * Sweetalert
+* Swiper
+* Vercel
