@@ -1,9 +1,8 @@
+# Kidzee - A Toy Marketplace
+
 ## Live website LINK : [Link](https://toy-marketplace-b19a0.web.app)
 
-## Project title 
-Kidzee - a website or Toy Car
-
-## Website features...
+## Website features:
 * This is a toy c related website and you can see toy cars also you can see the toys details, seller, price. 
 * if you want to see the cars you have to login or you can not see the Toys because this website has firebase integration. you can login with email & password or by google account .
 * the design of this site minimalistic and is also responsive.
