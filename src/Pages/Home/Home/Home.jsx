@@ -6,6 +6,7 @@ import NewsLetter from '../NewsLetter/NewsLetter';
 import HomeTabs from '../HomeTabs/HomeTabs';
 import VideoPlayer from '../VideoPlayer/VideoPlayer';
 import FeaturedItems from '../FeaturedItems/FeaturedItems';
+import AnimateCar from '../Animate/AnimateCar';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Banner></Banner>
             <div className='max-w-screen-xl mx-auto'>
                 <Gallery></Gallery>
+                <AnimateCar />
                 <HomeTabs></HomeTabs>
                 <VideoPlayer />
                 <FeaturedItems />
