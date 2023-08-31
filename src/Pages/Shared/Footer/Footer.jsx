@@ -3,7 +3,7 @@
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-teal-950 text-white">
+            <footer className="footer p-10 bg-gradient-to-l from-teal-950 to-black text-white">
                 <div>
                     
                 </div>
@@ -31,7 +31,7 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
-            <div className='text-center bg-teal-950 text-white  p-4'>
+            <div className='text-center bg-gradient-to-l from-teal-950 to-black text-white  p-4'>
                 <p>© Copyright 2023 Kidzee Car Store Ltd. All rights reserved</p>
             </div>
         </div>

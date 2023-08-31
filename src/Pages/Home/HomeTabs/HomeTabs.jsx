@@ -2,13 +2,15 @@
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import SectionTitle from '../../SectionTitle/SectionTitle';
 
 const HomeTabs = () => {
     return (
         <div className='p-8'>
-            <div className='text-center mb-5'>
-                <h3 className='lg:text-[42px] text-[40px] w-2/6 mx-auto rounded-lg p-1  md:text-[68px] text-white bg-teal-950 bg-opacity-90 font-bold' >Category</h3>
-            </div>
+           <SectionTitle
+                subHeading="Toy"
+                heading="Category"
+            />
             <Tabs>
                 <TabList>
                     <Tab>Race Cars</Tab>

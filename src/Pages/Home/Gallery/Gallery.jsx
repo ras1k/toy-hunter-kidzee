@@ -12,51 +12,56 @@ import img8 from '../../../assets/car (12).jpg'
 import img9 from '../../../assets/car (13).jpg'
 import img10 from '../../../assets/car (15).jpg'
 import img11 from '../../../assets/car (16).jpg'
+import SectionTitle from "../../SectionTitle/SectionTitle";
 
 
 const Gallery = () => {
 
     return (
         <div className='mt-10 mb-20'>
-            <div className='text-center mb-5'>
-                <h3 className='lg:text-[42px] text-[40px] w-2/6 mx-auto rounded-lg p-1  md:text-[68px] text-white bg-teal-950 bg-opacity-90 font-bold' >Image Gallery</h3>
-            </div>
+            <SectionTitle
+                subHeading="Image"
+                heading="Gallery"
+            />
             <>
-            <Carousel>
-                <div>
-                    <img src={img1} />
-                </div>
-                {/* <div>
+                <Carousel
+                    infiniteLoop={true}
+                    autoPlay={true}
+                >
+                    <div>
+                        <img src={img1} />
+                    </div>
+                    {/* <div>
                     <img src={img2} />
                 </div> */}
-                {/* <div>
+                    {/* <div>
                     <img src={img3} />
                 </div> */}
-                <div>
-                    <img src={img4} />
-                </div>
-                {/* <div>
+                    <div>
+                        <img src={img4} />
+                    </div>
+                    {/* <div>
                     <img src={img5} />
                 </div> */}
-                <div>
-                    <img src={img6} />
-                </div>
-                <div>
-                    <img src={img7} />
-                </div>
-                <div>
-                    <img src={img8} />
-                </div>
-                <div>
-                    <img src={img9} />
-                </div>
-                <div>
-                    <img src={img10} />
-                </div>
-                {/* <div>
+                    <div>
+                        <img src={img6} />
+                    </div>
+                    <div>
+                        <img src={img7} />
+                    </div>
+                    <div>
+                        <img src={img8} />
+                    </div>
+                    <div>
+                        <img src={img9} />
+                    </div>
+                    <div>
+                        <img src={img10} />
+                    </div>
+                    {/* <div>
                     <img src={img11} />
                 </div> */}
-            </Carousel>
+                </Carousel>
             </>
         </div >
     );
