@@ -5,6 +5,7 @@ import Featured from '../Featured/Featured';
 import NewsLetter from '../NewsLetter/NewsLetter';
 import HomeTabs from '../HomeTabs/HomeTabs';
 import VideoPlayer from '../VideoPlayer/VideoPlayer';
+import FeaturedItems from '../FeaturedItems/FeaturedItems';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
                 <Gallery></Gallery>
                 <HomeTabs></HomeTabs>
                 <VideoPlayer />
+                <FeaturedItems />
                 <Featured></Featured>
                 <NewsLetter ></NewsLetter>
             </div>
