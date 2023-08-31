@@ -1,5 +1,7 @@
 import React from 'react';
 import img from '../../../assets/login.png'
+import Tilt from 'react-parallax-tilt';
+
 const NewsLetter = () => {
     return (
         <div>
@@ -20,9 +22,9 @@ const NewsLetter = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <Tilt className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <img src={img} className='lg:w-full' alt="" />
-                    </div>
+                    </Tilt>
                 </div>
             </div>
         </div>

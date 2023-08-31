@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import logo from '../../../assets/kidzee-logo.png';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
@@ -14,25 +14,26 @@ const NavBar = () => {
             .catch(error => console.log(error))
     }
 
-    const navItems = <>
-        <li className='text-white'>
-            <NavLink to="/">Home</NavLink>
-        </li>
-        <li className='text-white'>
-            <NavLink to='/allToys'>All Toys</NavLink>
-        </li>
-        <li className='text-white'>
-            <NavLink to='/blog'>Blogs</NavLink>
-        </li>
-        <li className='text-white'>
-            <NavLink to='/about'>About us</NavLink>
-        </li>
-        {user?.email ? <>
-            <li className='text-white'><NavLink to='/myToys'>My Toys</NavLink></li>
-            <li className='text-white'><NavLink to='/addToy'>Add A Toy</NavLink></li>
-        </> :
-            <li className='text-white'></li>}
-    </>
+    const navItems =
+        <>
+            <li className='text-white'>
+                <NavLink to="/">Home</NavLink>
+            </li>
+            <li className='text-white'>
+                <NavLink to='/allToys'>All Toys</NavLink>
+            </li>
+            <li className='text-white'>
+                <NavLink to='/blog'>Blogs</NavLink>
+            </li>
+            <li className='text-white'>
+                <NavLink to='/about'>About us</NavLink>
+            </li>
+            {user?.email ? <>
+                <li className='text-white'><NavLink to='/myToys'>My Toys</NavLink></li>
+                <li className='text-white'><NavLink to='/addToy'>Add A Toy</NavLink></li>
+            </> :
+                <li className='text-white'></li>}
+        </>
 
     return (
         <div className="navbar flex items-center bg-gradient-to-l from-teal-950 to-black p-3 rounded-b-lg top-0 mb-4">
