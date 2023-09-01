@@ -1,10 +1,11 @@
 
 import { useLoaderData } from "react-router-dom";
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
+import SectionTitle from "../../SectionTitle/SectionTitle";
 
 const UpdatedToy = () => {
     const toy = useLoaderData();
-    const {picture,name,sellerName,email,subCategory,price,rating,description,quantity, _id} = toy;
+    const { picture, name, sellerName, email, subCategory, price, rating, description, quantity, _id } = toy;
 
     const handleUpdatedToy = event => {
         event.preventDefault();
@@ -21,7 +22,7 @@ const UpdatedToy = () => {
         const description = form.details.value;
         const quantity = form.quantity.value;
 
-        const updatedToy = {picture,name,sellerName,email,subCategory,price,rating,description,quantity }
+        const updatedToy = { picture, name, sellerName, email, subCategory, price, rating, description, quantity }
 
         console.log(updatedToy);
 
@@ -36,30 +37,32 @@ const UpdatedToy = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if(data.modifiedCount){
+                if (data.modifiedCount) {
                     Swal.fire(
                         'Toy Updated successfully',
-                      )
-                      form.reset();
+                    )
+                    form.reset();
                 }
             })
     }
     return (
-        <div>
-            <div className="bg-teal-950 p-24 mb-20 mt-10 rounded-lg">
-                <h2 className="text-4xl font-extrabold text-center text-white">Update Toy</h2>
+        <div className='max-w-screen-xl mx-auto'>
+            <SectionTitle
+                subHeading={'...'}
+                heading={'Update Toy'}
+            />
+            <div className="bg-teal-950 lg:p-24 p-4 mb-20 mt-10 rounded-lg">
                 <form onSubmit={handleUpdatedToy}>
-
-                    <div className="md:flex mb-8">
+                    <div className="md:flex lg:flex mb-8">
                         <div className="form-control md:w-1/2">
                             <label className="label">
                                 <span className="label-text text-white">Name</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="name" defaultValue={name} placeholder="Name"  className="input input-bordered w-full" />
+                                <input type="text" name="name" defaultValue={name} placeholder="Name" className="input input-bordered w-full" />
                             </label>
                         </div>
-                        <div className="form-control md:w-1/2 ml-4">
+                        <div className="form-control md:w-1/2 lg:ml-4">
                             <label className="label">
                                 <span className="label-text text-white">Price</span>
                             </label>
@@ -69,7 +72,7 @@ const UpdatedToy = () => {
                         </div>
                     </div>
 
-                    <div className="md:flex mb-8">
+                    <div className="md:flex lg:flex mb-8">
                         <div className="form-control md:w-1/2">
                             <label className="label">
                                 <span className="label-text text-white">Seller Name</span>
@@ -78,17 +81,17 @@ const UpdatedToy = () => {
                                 <input type="text" name="seller" defaultValue={sellerName} placeholder="Seller Name" className="input input-bordered w-full" />
                             </label>
                         </div>
-                        <div className="form-control md:w-1/2 ml-4">
+                        <div className="form-control md:w-1/2 lg:ml-4">
                             <label className="label">
                                 <span className="label-text text-white">Email</span>
                             </label>
                             <label className="input-group">
-                                <input readOnly type="text" defaultValue={email} name="email" placeholder="Email" className="input input-bordered w-full"  />
+                                <input readOnly type="text" defaultValue={email} name="email" placeholder="Email" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
 
-                    <div className="md:flex mb-8">
+                    <div className="md:flex lg:flex mb-8">
                         <div className="form-control md:w-1/2">
                             <label className="label">
                                 <span className="label-text text-white">Sub-category</span>
@@ -97,7 +100,7 @@ const UpdatedToy = () => {
                                 <input type="text" name="category" defaultValue={subCategory} placeholder="Sub-category" className="input input-bordered w-full" />
                             </label>
                         </div>
-                        <div className="form-control md:w-1/2 ml-4">
+                        <div className="form-control md:w-1/2 lg:ml-4">
                             <label className="label">
                                 <span className="label-text text-white">Rating</span>
                             </label>
@@ -107,7 +110,7 @@ const UpdatedToy = () => {
                         </div>
                     </div>
 
-                    <div className="md:flex mb-8">
+                    <div className="md:flex lg:flex mb-8">
                         <div className="form-control md:w-1/2">
                             <label className="label">
                                 <span className="label-text text-white">Available Quantity</span>
@@ -116,7 +119,7 @@ const UpdatedToy = () => {
                                 <input type="text" name="quantity" defaultValue={quantity} placeholder="Available Quantity" className="input input-bordered w-full" />
                             </label>
                         </div>
-                        <div className="form-control md:w-1/2 ml-4">
+                        <div className="form-control md:w-1/2 lg:ml-4">
                             <label className="label">
                                 <span className="label-text text-white">Detail description</span>
                             </label>
@@ -136,7 +139,7 @@ const UpdatedToy = () => {
                             </label>
                         </div>
                     </div>
-                    <input type="submit" value="Update Toy" className="text-white btn btn-neutral glass py-3 rounded-xl cursor-pointer btn-block" />
+                    <input type="submit" value="Update Toy" className="w-full rounded-3xl bg-gradient-to-l from-teal-950 to-black text-white btn cursor-pointer border-none mt-2" />
 
                 </form>
             </div>

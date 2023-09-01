@@ -23,7 +23,7 @@ const Featured = () => {
                             The new toy school bus sparks imagination with its vibrant colors and interactive features, offering endless fun for little adventurers...
                         </p>
                         <div className="card-actions justify-start mt-7">
-                            <a className="py-3 px-7 text-center text-[14px] font-[700] cursor-pointer rounded-full bg-yellow-950 text-white border-none w-full">Read More</a>
+                            <a className="w-full rounded-3xl bg-gradient-to-r from-teal-950 to-black text-white btn cursor-pointer border-none mt-2">Read More</a>
                         </div>
                     </div>
                 </Tilt>
@@ -35,7 +35,7 @@ const Featured = () => {
                             A classical toy car, timeless in its design, invokes nostalgia and endless play. Its simple charm captivates generations, fostering creativity and joyful exploration....
                         </p>
                         <div className="card-actions justify-start mt-7">
-                            <a className="py-3 px-7 text-center text-[14px] font-[700] cursor-pointer rounded-full bg-yellow-950 text-white border-none w-full">Read More</a>
+                            <a className="w-full rounded-3xl bg-gradient-to-r from-teal-950 to-black text-white btn cursor-pointer border-none mt-2">Read More</a>
                         </div>
                     </div>
                 </Tilt>
@@ -46,7 +46,7 @@ const Featured = () => {
                         <p>
                             The new toy car thrills young minds with its sleek design and exciting features, igniting endless playtime adventures and creativity...</p>
                         <div className="card-actions justify-start mt-7">
-                            <a className="py-3 px-7 text-center text-[14px] font-[700] cursor-pointer rounded-full bg-yellow-950 text-white border-none w-full">Read More</a>
+                            <a className="w-full rounded-3xl bg-gradient-to-r from-teal-950 to-black text-white btn cursor-pointer border-none mt-2">Read More</a>
                         </div>
                     </div>
                 </Tilt>
@@ -58,7 +58,7 @@ const Featured = () => {
 
                             A classic toy taxi exudes vintage charm, evoking a bygone era of city adventures. It sparks imaginative journeys and cherished playtime memories for all ages....</p>
                         <div className="card-actions justify-start mt-7">
-                            <a className="py-3 px-7 text-center text-[14px] font-[700] cursor-pointer rounded-full bg-yellow-950 text-white border-none w-full">Read More</a>
+                            <a className="w-full rounded-3xl bg-gradient-to-r from-teal-950 to-black text-white btn cursor-pointer border-none mt-2">Read More</a>
                         </div>
                     </div>
                 </Tilt>
