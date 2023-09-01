@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
 
 const MyToy = ({ toy, handleDelete }) => {
-    const { picture, name, sellerName, email, subCategory, price, rating, description, quantity, _id } = toy;
+    const {
+        picture,
+        name,
+        sellerName,
+        subCategory,
+        price,
+        quantity, _id
+    } = toy;
 
     return (
-        <div>
-            <div className="overflow-x-auto w-full">
+        <div className="lg:h-[550px]">
+            <div className="overflow-auto w-full">
                 <table className="table w-full">
                     {/* head */}
                     <thead>
@@ -56,16 +63,14 @@ const MyToy = ({ toy, handleDelete }) => {
                             <th>
                                 <Link to={`/updatedToy/${_id}`}><button className="btn btn-outline btn-sm btn-neutral">Edit</button></Link>
                             </th>
-                          
+
                             <th>
-                                <button onClick={()=>handleDelete(_id)} className="btn btn-circle btn-outline">
+                                <button onClick={() => handleDelete(_id)} className="btn btn-circle btn-outline">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-red-600 hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
                                 </button>
                             </th>
                         </tr>
                     </tbody>
-
-
                 </table>
             </div>
         </div>

@@ -42,13 +42,14 @@ const MyToys = () => {
 
     }
     return (
-        <div>
+        <div className='max-w-screen-xl mx-auto'>
             {
-                toyData.map(toy => <MyToy
-                    key={toy._id}
-                    handleDelete={handleDelete}
-                    toy={toy}
-                ></MyToy>)
+                toyData.map(toy =>
+                    <MyToy
+                        key={toy._id}
+                        handleDelete={handleDelete}
+                        toy={toy}
+                    ></MyToy>)
             }
         </div>
     );
