@@ -30,9 +30,9 @@ const Featured = () => {
                 <Tilt className="card w-full bg-base-100 card-area  mt-5 shadow-xl">
                     <figure><img src={img2} alt="Food" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">New Toy School Bus looks stunning</h2>
+                        <h2 className="card-title">New Classical Toy car looks stunning</h2>
                         <p>
-                            The new toy school bus sparks imagination with its vibrant colors and interactive features, offering endless fun for little adventurers...
+                            A classical toy car, timeless in its design, invokes nostalgia and endless play. Its simple charm captivates generations, fostering creativity and joyful exploration....
                         </p>
                         <div className="card-actions justify-start mt-7">
                             <a className="py-3 px-7 text-center text-[14px] font-[700] cursor-pointer rounded-full bg-yellow-950 text-white border-none w-full">Read More</a>
@@ -44,7 +44,7 @@ const Featured = () => {
                     <div className="card-body">
                         <h2 className="card-title">Beautiful new toy car for you</h2>
                         <p>
-                        The new toy car thrills young minds with its sleek design and exciting features, igniting endless playtime adventures and creativity...</p>
+                            The new toy car thrills young minds with its sleek design and exciting features, igniting endless playtime adventures and creativity...</p>
                         <div className="card-actions justify-start mt-7">
                             <a className="py-3 px-7 text-center text-[14px] font-[700] cursor-pointer rounded-full bg-yellow-950 text-white border-none w-full">Read More</a>
                         </div>
@@ -53,9 +53,10 @@ const Featured = () => {
                 <Tilt className="card w-full bg-base-100 card-area mt-5 shadow-xl">
                     <figure><img src={img3} alt="Food" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">Beautiful new toy car for you</h2>
+                        <h2 className="card-title">This taxi can go miles</h2>
                         <p>
-                        The new toy car thrills young minds with its sleek design and exciting features, igniting endless playtime adventures and creativity...</p>
+
+                            A classic toy taxi exudes vintage charm, evoking a bygone era of city adventures. It sparks imaginative journeys and cherished playtime memories for all ages....</p>
                         <div className="card-actions justify-start mt-7">
                             <a className="py-3 px-7 text-center text-[14px] font-[700] cursor-pointer rounded-full bg-yellow-950 text-white border-none w-full">Read More</a>
                         </div>

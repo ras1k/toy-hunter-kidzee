@@ -8,13 +8,13 @@ const AnimateCar = () => {
                 autoplay
                 loop
                 src="https://lottie.host/cbd038e1-f890-46b4-9324-fbbe31b95398/hKrvJ84Okx.json"
-                style={{ height: '400px', width: '400px' }}
+                className="lg:h-[400px] h-[250px]  w-full"
             />
             <Player
                 autoplay
                 loop
                 src="https://lottie.host/fead9ae2-1eb3-4219-8927-fdc8d4fb8b50/uLFMGBJdCO.json"
-                style={{ height: '400px', width: '400px' }}
+                className="lg:h-[400px] h-[250px]  w-full"
             />
         </div>
     );

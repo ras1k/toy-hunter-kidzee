@@ -1,17 +1,16 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ToyCard = ({ toy }) => {
-    const {_id, picture, name, price, quantity, subCategory, sellerName} = toy;
+    const { _id, picture, name, price, quantity, subCategory, sellerName } = toy;
     return (
         <div className=''>
-            <div className="overflow-x-auto">
+            <div className="overflow-auto">
                 <table className="table">
                     {/* head */}
                     <thead>
                         <tr>
                             <th>
-                               
+                                #
                             </th>
                             <th className='text-xl font-semibold'>Toy Name</th>
                             <th className='text-xl font-semibold'>Seller</th>
@@ -23,7 +22,7 @@ const ToyCard = ({ toy }) => {
                     </thead>
                     <tbody>
                         {/* row 1 */}
-                        <tr className='w-full'>
+                        <tr className='w-full '>
                             <th>
                                 <label>
                                     <input type="checkbox" className="checkbox" />
