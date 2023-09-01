@@ -26,7 +26,7 @@ const NavBar = () => {
                 <NavLink to='/blog'>Blogs</NavLink>
             </li>
             <li className='text-white'>
-                <NavLink to='/about'>About us</NavLink>
+                <NavLink to='/about'>About Us</NavLink>
             </li>
             {user?.email ? <>
                 <li className='text-white'><NavLink to='/myToys'>My Toys</NavLink></li>
@@ -36,7 +36,7 @@ const NavBar = () => {
         </>
 
     return (
-        <div className="navbar flex items-center bg-gradient-to-l from-teal-950 to-black p-3 rounded-b-lg top-0 mb-4">
+        <div className="navbar flex items-center bg-gradient-to-l from-teal-950 to-black p-3  top-0">
             <div className="navbar-start flex">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost text-white lg:hidden">

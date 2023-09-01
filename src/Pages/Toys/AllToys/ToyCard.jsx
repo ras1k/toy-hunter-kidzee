@@ -4,7 +4,7 @@ const ToyCard = ({ toy }) => {
     const { _id, picture, name, price, quantity, subCategory, sellerName } = toy;
     return (
         <div className=''>
-            <div className="overflow-auto">
+            <div className="overflow-auto w-none lg:w-full">
                 <table className="table">
                     {/* head */}
                     <thead>

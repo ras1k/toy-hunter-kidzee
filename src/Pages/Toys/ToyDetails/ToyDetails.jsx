@@ -1,13 +1,18 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import SectionTitle from '../../SectionTitle/SectionTitle';
 
 const ToyDetails = () => {
     const allToys = useLoaderData()
     const { picture, name, price, quantity, email, description, rating, sellerName } = allToys;
     return (
-        <div>
+        <div className='max-w-screen-xl mx-auto'>
+            <SectionTitle
+                subHeading={'...'}
+                heading={'Toy Details'}
+            />
             <div className="hero mb-10">
-                <div className="hero-content flex-col gap-20 lg:flex-row">
+                <div className="hero-content flex-col items-center justify-center gap-20 lg:flex-row">
                     <div className='bg-teal-950 bg-opacity-90 rounded-lg'>
                         <img src={picture} className="max-w-sm rounded-lg p-8 shadow-2xl" />
                     </div>

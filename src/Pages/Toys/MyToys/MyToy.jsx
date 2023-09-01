@@ -11,8 +11,8 @@ const MyToy = ({ toy, handleDelete }) => {
     } = toy;
 
     return (
-        <div className="lg:h-[550px]">
-            <div className="overflow-auto w-full">
+        <div className="">
+            <div className="overflow-auto w-none lg:w-full">
                 <table className="table w-full">
                     {/* head */}
                     <thead>

@@ -6,7 +6,7 @@ const Banner = () => {
     return (
         <div>
             <div>
-                <div className='lg:p-24 p-6 mt-0 bg-fixed mb-20 background rounded-lg'>
+                <div className='lg:p-24 p-6 mt-0 bg-fixed mb-20 background rounded-b-lg'>
                     <div className='bg-teal-950 bg-opacity-60 rounded-lg lg:p-24 p-4 h-96 lg:h-[600px] md:h-[400px] text-center flex flex-col items-center justify-center'>
                         <h3 className='lg:text-6xl text-3xl font-mono text-white font-bold my-4'>Toy Cars for Your Kids</h3>
                         <p className='lg:font-semibold text-sm lg:text-lg mb-4 text-white'>
