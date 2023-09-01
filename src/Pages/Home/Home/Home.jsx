@@ -7,6 +7,7 @@ import HomeTabs from '../HomeTabs/HomeTabs';
 import VideoPlayer from '../VideoPlayer/VideoPlayer';
 import FeaturedItems from '../FeaturedItems/FeaturedItems';
 import AnimateCar from '../Animate/AnimateCar';
+import Testimonials from '../Testimonials/Testimonials';
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
                 <VideoPlayer />
                 <FeaturedItems />
                 <Featured></Featured>
+                <Testimonials />
                 <NewsLetter ></NewsLetter>
             </div>
         </div>
