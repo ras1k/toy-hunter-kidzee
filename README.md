@@ -12,7 +12,7 @@
 * React Router Dom:  React router dom is used to maintain the routes
 
 ## Technologies Used: 
-* ReactJS
+* React/Vite
 * NodeJS
 * ExpressJS
 * MongoDB
