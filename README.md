@@ -23,5 +23,5 @@
 * React Tabs
 * React Router Dom
 * Sweetalert2
-* Swiperjs
+* SwiperJs
 * Vercel
